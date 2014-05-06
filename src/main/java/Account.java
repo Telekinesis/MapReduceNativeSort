@@ -1,4 +1,4 @@
-package org.telekinesis.mapreduce;
+
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -19,6 +19,10 @@ public class Account implements Writable
     private int    field08;
     private int    field09;
     private double new1;
+    
+    public Account()
+    {
+    }
 
     public Account(int field00, char field01, long field02, int field03,
 	    int field04, int field05, int field06, int field07, int field08,
