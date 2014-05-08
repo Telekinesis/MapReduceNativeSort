@@ -1,7 +1,7 @@
-import org.telekinesis.commonclasses.entity.Pair;
+import java.io.IOException;
 
 
 public interface SerializationLineParser<K, V>
 {
-    public Pair<K, V> parse(String line);
+    public KeyValuePair<K, V> parse(String line) throws IOException;
 }

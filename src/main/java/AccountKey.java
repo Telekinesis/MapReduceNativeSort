@@ -88,4 +88,50 @@ public class AccountKey implements WritableComparable<AccountKey>
 	        + ", field06=" + field06 + ", field08=" + field08 + "]";
     }
 
+    @Override
+    public int hashCode()
+    {
+	final int prime = 31;
+	int result = 1;
+	result = prime * result
+	        + ( ( field02 == null ) ? 0 : field02.hashCode() );
+	result = prime * result
+	        + ( ( field05 == null ) ? 0 : field05.hashCode() );
+	result = prime * result
+	        + ( ( field06 == null ) ? 0 : field06.hashCode() );
+	result = prime * result
+	        + ( ( field08 == null ) ? 0 : field08.hashCode() );
+	return result;
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+	if (this == obj) return true;
+	if (obj == null) return false;
+	if (getClass() != obj.getClass()) return false;
+	AccountKey other = (AccountKey) obj;
+	if (field02 == null)
+	{
+	    if (other.field02 != null) return false;
+	}
+	else if (!field02.equals(other.field02)) return false;
+	if (field05 == null)
+	{
+	    if (other.field05 != null) return false;
+	}
+	else if (!field05.equals(other.field05)) return false;
+	if (field06 == null)
+	{
+	    if (other.field06 != null) return false;
+	}
+	else if (!field06.equals(other.field06)) return false;
+	if (field08 == null)
+	{
+	    if (other.field08 != null) return false;
+	}
+	else if (!field08.equals(other.field08)) return false;
+	return true;
+    }
+
 }
